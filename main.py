@@ -26,7 +26,7 @@ JOBS = [
 @app.route("/")
 def print_HW():
     return render_template('home.html',jobs=JOBS                            
-                           , company_name='Ban De Fukrey')
+                           , company_name='Kanpuriya')
 
 @app.route("/api/jobs")
 def list_jobs():
