@@ -16,10 +16,10 @@
     <body>
         <div class="container">
             <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
-            <img class="img-fluid" id="banner" src="https://oms-flask-site-prac.onrender.com/static/banner.jpg" height="320">
+            <img class="img-fluid" id="banner" src="static/banner.jpg" height="320">
             <h2 class="text-center mt-2 mb-4">About {{company_name}}</h2>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Ultrices vitae auctor eu augue ut lectus arcu. Maecenas pharetra convallis posuere morbi leo urna molestie at elementum. Dignissim sodales ut eu sem. Eget duis at tellus at urna condimentum mattis pellentesque id. </p>
-            <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+            <h2 class="text-center mt-2 mb-4">Job Openings</h2>
             <p>
             {%for job in jobs%}
                 {%include 'jobitem.html'%}
