@@ -8,11 +8,3 @@ dbEngine = create_engine(dbConnectionStr,
         "ssl_ca":"/etc/ssl/cert.pem"
     }
     })
-
-with dbEngine.connect() as conn:
-    result = conn.execute(text('select * from jobs'))
-    result_dicts = []
-    for row in result.all():
-        result_dicts.append(dict(row))
-
-    print(result_dicts)
