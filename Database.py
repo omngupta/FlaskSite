@@ -1,6 +1,15 @@
 from sqlalchemy import create_engine, text
+from Settings import setEnvironmentVaribales
+import os
 
-dbConnectionStr = "mysql+pymysql://t5fjynaoxy90iqrzfcuk:pscale_pw_G89OnKWkmmxGWCjZvOP7xQSFYzwLI1ccceEM8nbzilJ@aws.connect.psdb.cloud/flasksiteprac"
+# Set & Get Env Variables
+setEnvironmentVaribales()
+dbUser = os.environ['DBUSER'].strip()
+dbPwd = os.environ['DBPWD'].strip()
+dbHost = os.environ['DBHOST'].strip()
+dbName = os.environ['DBNAME'].strip()
+
+dbConnectionStr = f"mysql+pymysql://{dbUser}:{dbPwd}@{dbHost}/{dbName}"
 
 dbEngine = create_engine(dbConnectionStr,
     connect_args={
