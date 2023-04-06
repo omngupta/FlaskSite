@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{company_name}} - {{job.title}}</title>
+        {%include 'bootstrap.html'%}
+    </head>
+    <body>
+        {%include 'nav.html'%}
+        {%include 'banner.html'%}
+        <div class="container">
+            <h1 class="text-center mt-2 mb-4">{{job.title}}</h1>
+            <h2 class="text-center mt-2 mb-4">{{job.requirements}}</h1>
+            
+        </div>
+        {%include 'footer.html'%}
+    </body>
+</html>

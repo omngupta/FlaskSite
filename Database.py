@@ -24,4 +24,18 @@ def loadJobsFromDB():
         jobs = []
         for row in result.all():
             jobs.append(row)
-        return jobs 
+        return jobs
+    
+def loadJobFromDB(id):
+    with dbEngine.connect() as conn:
+        result = conn.execute(text(f"select * from jobs where id ={id}"))
+        rows=result.all()
+
+        if len(rows) == 0:
+            return None
+        else:
+            return rows[0]._asdict()
+        
+
+
+  
