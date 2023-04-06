@@ -6,4 +6,3 @@ def setEnvironmentVaribales():
         lines=envFile.readlines()
         for ln in lines:
             os.environ[ln[0:ln.find('=')]] = ln[ln.find('=')+1:]
-            
